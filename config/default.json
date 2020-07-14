@@ -1,5 +1,5 @@
 {
   "port": 8000,
-  "omdbUrl": "",
-  "omdbKey": ""
+  "omdbUrl": "http://www.omdbapi.com/",
+  "omdbKey": "apikey=143587ee"
 }
