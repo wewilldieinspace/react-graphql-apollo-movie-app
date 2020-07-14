@@ -1,0 +1,29 @@
+{
+  "name": "react-graphql-apollo-movie-app",
+  "version": "1.0.0",
+  "description": "Simple movie search app using OMDb API, GraphQL, Express and React, Apollo",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wewilldieinspace/react-graphql-apollo-movie-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wewilldieinspace/react-graphql-apollo-movie-app/issues"
+  },
+  "homepage": "https://github.com/wewilldieinspace/react-graphql-apollo-movie-app#readme",
+  "dependencies": {
+    "config": "3.3.1",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "express-graphql": "0.11.0",
+    "graphql": "15.3.0",
+    "node-fetch": "2.6.0",
+    "nodemon": "2.0.4"
+  }
+}
