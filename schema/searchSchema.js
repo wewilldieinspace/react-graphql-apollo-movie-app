@@ -8,7 +8,7 @@ const MovieType = require('./movieSchema');
 const SearchType = new GraphQLObjectType({
     name: 'Search',
     fields: () => ({
-        totalResult: {
+        totalResults: {
             type: GraphQLInt,
             resolve: result => result.totalResults
         },
