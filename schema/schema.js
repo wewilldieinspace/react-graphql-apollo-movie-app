@@ -11,12 +11,12 @@ const MovieType = require('./movieSchema');
 const SearchType = require('./searchSchema');
 
 
-// get config
+// config
 const key = config.get('omdbKey');
 const url = config.get('omdbUrl');
 
 
-// api fetch
+// fetch
 const fetchSearch = title => {
     return fetch(`${url}?s=${title}&${key}`)
         .then(res => res.json())
