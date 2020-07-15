@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core'
 // Pages
 import { search } from './pages/search'
-import { film } from './pages/film'
+import { movie } from './pages/movie'
 
 
 const useStyles = makeStyles({
@@ -24,7 +24,7 @@ export const App = () => {
                 <Router>
                     <Switch>
                         <Route path='/' exact component={search} />
-                        <Route path='/id=:id' component={film} />
+                        <Route path='/id=:id' component={movie} />
                     </Switch>
                 </Router>
             </Grid>

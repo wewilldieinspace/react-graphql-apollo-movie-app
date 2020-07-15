@@ -1,18 +1,17 @@
 import * as React  from 'react'
-import { useLazyQuery } from '@apollo/react-hooks'
 // MaterialUI
 import OutlinedInput from '@material-ui/core/OutlinedInput'
 import SearchIcon from '@material-ui/icons/Search'
 import FormControl from '@material-ui/core/FormControl'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import Grid from '@material-ui/core/Grid'
-import { useStyles } from './styles'
+import { useStyles } from './searchStyles'
 // Components
-import { FilmItem } from '../components/filmItem'
+import { MovieItem } from '../components/movieItem'
 // Types
-import { SearchResultI } from '../types'
-import { FilmItemI } from '../types'
+import { SearchResultI, MovieItemI } from '../types'
 // Query
+import { useLazyQuery } from '@apollo/react-hooks'
 import { Search } from '../query/searchQuery'
 
 
@@ -52,9 +51,9 @@ export const search = () => {
             >
                 {
                     loading ? <h2>Loading...</h2> : (
-                        data && data?.search?.movies?.map((el: FilmItemI) => {
+                        data && data?.search?.movies?.map((el: MovieItemI) => {
                             return (
-                                <FilmItem
+                                <MovieItem
                                     key={ el.id }
                                     poster={ el.poster }
                                     title={ el.title }

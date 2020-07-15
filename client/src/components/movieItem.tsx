@@ -6,11 +6,11 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import { useStyles } from './style'
 // Types
-import { FilmItemI } from '../types'
+import { MovieItemI } from '../types'
 
 
 
-export const FilmItem = (props: FilmItemI) => {
+export const MovieItem = (props: MovieItemI) => {
     const { title, poster, type, year, id } = props
     const classes = useStyles()
     return (
