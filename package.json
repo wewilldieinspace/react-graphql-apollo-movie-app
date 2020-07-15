@@ -4,7 +4,9 @@
   "description": "Simple movie search app using OMDb API, GraphQL, Express and React, Apollo",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,8 @@
     "graphql": "15.3.0",
     "node-fetch": "2.6.0",
     "nodemon": "2.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "5.2.0"
   }
 }
