@@ -8,6 +8,7 @@ export const useStyles = makeStyles({
         boxShadow: '0 0px 20px 10px rgba(155, 105, 135, .3)',
         margin: '20px auto',
         padding: 30,
+        minHeight: 600,
 
         '& p': {
             borderTop: '1px solid gray',
@@ -18,6 +19,7 @@ export const useStyles = makeStyles({
             paddingRight: '10%',
             lineHeight: '25px',
             letterSpacing: '.3px',
+            boxSizing: 'border-box',
         }
     },
     mainTitle: {

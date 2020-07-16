@@ -5,7 +5,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import ListItem from '@material-ui/core/ListItem'
 import List from '@material-ui/core/List'
-import { useStyles } from './movieStyles'
+import { useStyles } from './style'
 // Query
 import { useQuery } from '@apollo/react-hooks'
 import { filmQuery } from '../query/filmQuery'
@@ -49,6 +49,7 @@ export const movie = (props: MoviePagePropsI) => {
 
                 <CardMedia
                     className={classes.poster}
+                    component='img'
                     image={movie?.poster}
                     title={movie?.title}
                 />

@@ -5,7 +5,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import FormControl from '@material-ui/core/FormControl'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import Grid from '@material-ui/core/Grid'
-import { useStyles } from './searchStyles'
+import { useStyles } from './style'
 // Components
 import { MovieItem } from '../components/movieItem'
 // Types

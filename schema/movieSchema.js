@@ -39,9 +39,17 @@ const MovieType = new GraphQLObjectType({
             type: GraphQLString,
             resolve: result => result.Plot
         },
+        released: {
+            type: GraphQLString,
+            resolve: result => result.Released
+        },
         totalSeasons: {
             type: GraphQLString,
-            resolve: result => result.TotalSeasons
+            resolve: result => result.totalSeasons
+        },
+        runtime: {
+            type: GraphQLString,
+            resolve: result => result.Runtime
         },
         id: {
             type: GraphQLID,
