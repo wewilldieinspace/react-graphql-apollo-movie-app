@@ -40,6 +40,16 @@ export const search = () => {
                     onChange={handleChange}
                     startAdornment={<InputAdornment position="start"><SearchIcon /></InputAdornment>}
                 />
+                {
+                    data?.search?.movies?.length && (
+                    <p className={classes.totalResults}
+                    >{`Found ${ +data?.search?.totalResults > 10 ? (
+                            'a hell of a lot of'
+                        ) : (data?.search?.totalResults
+                        ) } results`}
+                    </p>
+                    )
+                }
             </FormControl>
             <Grid
                 container item

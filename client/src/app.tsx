@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     root: {
         marginTop: '80px',
         fontFamily: 'Arial',
+        textAlign: 'center',
     }
 })
 

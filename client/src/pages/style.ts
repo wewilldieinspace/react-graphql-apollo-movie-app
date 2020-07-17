@@ -6,7 +6,7 @@ export const useStyles = makeStyles({
         border: '1px solid blue',
         borderRadius: 3,
         boxShadow: '0 0px 20px 10px rgba(155, 105, 135, .3)',
-        margin: '20px auto',
+        margin: '50px auto',
         padding: 30,
         minHeight: 600,
 
@@ -22,6 +22,19 @@ export const useStyles = makeStyles({
             boxSizing: 'border-box',
         }
     },
+
+    'MuiInputBase-root': {
+        position: 'relative',
+    },
+
+    totalResults: {
+        position: 'absolute',
+        right: 30,
+        bottom: 0,
+        top: 0,
+        fontStyle: 'italic',
+    },
+
     mainTitle: {
         fontSize: 30,
         margin: '0 auto',

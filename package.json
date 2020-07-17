@@ -12,8 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/wewilldieinspace/react-graphql-apollo-movie-app.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "hooks",
+    "apollo",
+    "graphql",
+    "express"
+  ],
+  "author": "Andrey <¯|_(ツ)_|¯>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wewilldieinspace/react-graphql-apollo-movie-app/issues"
