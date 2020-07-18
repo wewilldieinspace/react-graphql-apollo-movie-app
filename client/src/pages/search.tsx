@@ -1,4 +1,5 @@
 import * as React  from 'react'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 // MaterialUI
 import OutlinedInput from '@material-ui/core/OutlinedInput'
 import SearchIcon from '@material-ui/icons/Search'
@@ -17,19 +18,21 @@ import { Search } from '../query/searchQuery'
 
 
 export const search = () => {
-    const [value, changeValue] = React.useState('')
+    const { value, changeValue } = useLocalStorage('inputValue')
     const title = value.trim().toLowerCase().replace(/ /g, '+')
     const classes = useStyles()
-
     const [getMovies, { loading, data }] = useLazyQuery<SearchResultI, { title: string }>(Search, {
         variables: {
             title
         }
     })
 
+    React.useEffect(() => {
+        getMovies()
+    }, [value])
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         changeValue(e.target.value)
-        getMovies()
     }
 
     return (
@@ -43,7 +46,7 @@ export const search = () => {
                 {
                     data?.search?.movies?.length && (
                     <p className={classes.totalResults}
-                    >{`Found ${ +data?.search?.totalResults > 10 ? (
+                    >{`Found ${ +data?.search?.totalResults > 50 ? (
                             'a hell of a lot of'
                         ) : (data?.search?.totalResults
                         ) } results`}
